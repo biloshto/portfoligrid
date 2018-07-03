@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- CDN for the lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Portfoligrid</title>
+</head>
+<body>
+
+  <!-- the site is constrained inside this container, it'll go around everything -->
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <header id="main-header">
+      <!-- no-gutters gets rid od the spacings between columns -->
+      <div class="row no-gutters">
+        <!-- where the image goes: 4-column on large screens; 5-columns on medium screens; and 1-column on small screens -->
+        <div class="col-lg-4 col-md-5 col-sm-12">
+          <img src="img/person1.jpg" alt="">
+        </div>
+        <!-- where all other stuff goes: 8-column on large screens; 7-columns on medium screens; and 1-column on small screens -->
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <!-- d-flex for display flex, and flex-column because we're doing this vertically not horizontally which is the default -->
+          <div class="d-flex flex-column">
+            <div class="p-5 bg-inverse text-white">
+              <!-- it's going horizontally, justify-content-between takes the extra spacings and put it inbetween each item; name is a custom class -->
+              <div class="name d-flex flex-row justify-content-between align-items-center">
+                <h1 class="display-4">John Doe</h1>
+                <div><i class="fa fa-twitter pt-3"></i></div>
+                <div><i class="fa fa-facebook pt-3"></i></div>
+                <div><i class="fa fa-instagram pt-3"></i></div>
+                <div><i class="fa fa-github pt-3"></i></div>
+              </div>
+            </div>
+            <!-- bg-dark is a custom class -->
+            <div class="p-4 bg-dark">Experienced Full Stack Web Developer</div>
+            <div>
+              <!-- align-items-stretch - we want each item to stretch across -->
+              <div class="d-flex flex-row text-white align-items-stretch text-center">
+                <div class="port-item p-4 bg-primary" data-toggle="collapse" data-target="#home">
+                  <i class="fa fa-home d-block"></i> Home
+                </div>
+                <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#resume">
+                  <i class="fa fa-graduation-cap d-block"></i> Resume
+                </div>
+                <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#work">
+                  <i class="fa fa-folder-open d-block"></i> Work
+                </div>
+                <div class="port-item p-4 bg-danger" data-toggle="collapse" data-target="#contact">
+                  <i class="fa fa-envelope d-block"></i> Contact
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- HOME COLLAPSE ITEM -->
+
+    <!-- we want this to show by default; the id should match whatever we have for the data-target in the Home link -->
+    <div id="home" class="collapse show">
+      <div class="card card-block card-primary text-white py-5">
+        <h2>Welcome to My Page</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, recusandae.</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>My Skills</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nostrum libero, maxime neque aliquid expedita nobis odio veniam aperiam nemo.</p>
+        <hr>
+        <h4>HTML</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progress-bar" style="width:100%"></div>
+        </div>
+        <h4>CSS</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progress-bar" style="width:100%"></div>
+        </div>
+        <h4>JavaScript</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progress-bar" style="width:85%"></div>
+        </div>
+        <h4>PHP</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progress-bar" style="width:75%"></div>
+        </div>
+        <h4>Python</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progress-bar" style="width:65%"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- RESUME COLLAPSE ITEM -->
+
+    <div id="resume" class="collapse">
+      <div class="card card-block card-success text-white py-5">
+        <h2>My Resume</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, blanditiis!</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>Where Have I Worked?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, nobis cum quidem perferendis repellendus at.</p>
+        <div class="card-deck">
+          <div class="card mb-3">
+            <div class="card-block">
+              <h4 class="card-title">Devmasters</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, neque!</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position: Full Stack Developer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (555) 555-5555
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2015 - 2017</h6>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-block">
+              <h4 class="card-title">Websites Pro</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, neque!</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position: Front End Developer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (444) 444-4444
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2013 - 2015</h6>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-block">
+              <h4 class="card-title">123 Designs</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, neque!</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position: Designer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (333) 333-3333
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2010 - 2013</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- WORK COLLAPSE ITEM -->
+
+    <div id="work" class="collapse">
+      <div class="card card-block card-warning text-white py-5">
+        <h2>My Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, blanditiis!</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>What Have I Built?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, nobis cum quidem perferendis repellendus at.</p>
+        <!-- no-gutters gets rid of the spacing in-between the grid items -->
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=255" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=255" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=256" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=256" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=257" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=257" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=258" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=258" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=259" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=259" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=260" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=260" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=261" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=261" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://picsum.photos/1200/768.jpg?image=250" data-toggle="lightbox">
+              <img src="https://picsum.photos/600.jpg?image=250" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- CONTACT COLLAPSE ITEM -->
+
+    <div id="contact" class="collapse">
+      <div class="card card-block card-danger text-white py-5">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, blanditiis!</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>Get In Touch</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, nobis cum quidem perferendis repellendus at.</p>
+        <form>
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-user"></i>
+              </span>
+              <input type="text" class="form-control bg-inverse text-white" placeholder="Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <input type="email" class="form-control bg-inverse text-white" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-pencil"></i>
+              </span>
+              <textarea rows="5" class="form-control bg-inverse text-white" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <input type="submit" class="btn btn-danger btn-block btn-lg" value="Submit">
+        </form>
+      </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer id="main-footer" class="p-5 bg-inverse text-white">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="#" class="btn btn-outline-secondary"><i class="fa fa-cloud"></i> Download My Resume</a>
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- JS for the lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+
+
+  <script>
+  // jQuery that takes care of the collapse issue
+  // we're taking the port-item, the menu items that we click, and on click it's going to run a function, and this function is going to take all the collapse items and we're going to set collapse to hide, so it'll just automatically hide everything before it actually opens the collapse
+    $('.port-item').click(function() {
+      $('.collapse').collapse('hide');
+    });
+
+    // jQuery for the lightbox
+    // it's looking for anything with the data-toggle="lightbox" and it's going to call for the plugin
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+</body>
+</html>

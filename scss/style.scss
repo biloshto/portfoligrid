@@ -1,0 +1,111 @@
+.bg-dark {
+  background: #000;
+  color: #fff;
+}
+
+// HEADER
+
+#main-header {
+  img {
+    width: 100%; // 100% of it's container
+    height: 100%;
+  }
+
+  .port-item {
+    width: 25%;
+
+    .fa {
+      font-size: 2em;
+    }
+  }
+
+  .port-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+
+
+// CONTACT
+
+#contact {
+  .input-group-addon {
+    width: 70px;
+  }
+}
+
+
+
+// MEDIA QUERY
+
+@media(min-width:1199px) {
+  .port-item {
+    padding: 2.5em !important; // so they are aligned with the image
+  }
+}
+
+@media(min-width:991px) {
+  .name {
+    .fa {
+      font-size: 25px; // so the icons are bigger on bigger screens
+    }
+  }
+}
+
+/* Big tablets (widths smaller than the 1140px row): from 1024px to 1200px */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Small tablets in portrait mode to big tablets: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+  .name {
+    h1 {
+      font-size: 250%;
+    }
+
+    .fa {
+      font-size: 1.3em;
+      margin-top: -5px;
+    }
+  }
+}
+
+/* Larger phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+  .name {
+    h1 {
+      font-size: 350%;
+    }
+
+    .fa {
+      font-size: 1.5em;
+      // padding-top: 0.5em;
+    }
+  }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  .name {
+    h1 {
+      font-size: 200%;
+    }
+
+    .fa {
+      font-size: 1em;
+      margin: -8px 4px 0 4px;
+    }
+  }
+
+  #contact {
+    .input-group-addon {
+      width: 65px;
+    }
+
+    .fa {
+      font-size: 0.8em;
+    }
+  }
+}
